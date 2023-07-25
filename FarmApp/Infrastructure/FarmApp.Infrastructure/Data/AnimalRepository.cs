@@ -13,7 +13,7 @@ namespace FarmApp.Infrastructure.Data
 
         public bool Exists(string name)
         {
-            return _animals.Any(p => p.Name == name);
+            return _animals.Any(p => p.Name.ToUpper() == name.ToUpper());
         }
 
         public List<Animal> GetAll()
